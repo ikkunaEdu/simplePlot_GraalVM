@@ -1,0 +1,404 @@
+Tue Jul 24 17:12:30 GMT 2018
+com.oracle.truffle.r.runtime.RInternalError: java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at com.oracle.truffle.r.nodes.function.FunctionDefinitionNode.execute(FunctionDefinitionNode.java:317)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callProxy(OptimizedCallTarget.java:262)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callRoot(OptimizedCallTarget.java:251)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callBoundary(OptimizedCallTarget.java:241)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.doInvoke(OptimizedCallTarget.java:226)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callDirect(OptimizedCallTarget.java:209)
+	at org.graalvm.compiler.truffle.runtime.OptimizedDirectCallNode.callProxy(OptimizedDirectCallNode.java:86)
+	at org.graalvm.compiler.truffle.runtime.OptimizedDirectCallNode.call(OptimizedDirectCallNode.java:70)
+	at com.oracle.truffle.r.nodes.function.call.CallRFunctionNode.execute(CallRFunctionNode.java:59)
+	at com.oracle.truffle.r.nodes.function.RCallNode$DispatchedCallNode.execute(RCallNode.java:1167)
+	at com.oracle.truffle.r.nodes.function.RCallNode$FunctionDispatch.dispatch(RCallNode.java:892)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen$FunctionDispatchNodeGen.executeAndSpecialize(RCallNodeGen.java:708)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen$FunctionDispatchNodeGen.execute(RCallNodeGen.java:672)
+	at com.oracle.truffle.r.nodes.function.RCallNode.call(RCallNode.java:279)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen.executeAndSpecialize(RCallNodeGen.java:222)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen.execute(RCallNodeGen.java:206)
+	at com.oracle.truffle.r.runtime.nodes.RNode.visibleExecute(RNode.java:74)
+	at com.oracle.truffle.r.nodes.function.WrapArgumentBaseNode.visibleExecute(WrapArgumentBaseNode.java:63)
+	at com.oracle.truffle.r.engine.REngine$AnonymousBodyNode.visibleExecute(REngine.java:636)
+	at com.oracle.truffle.r.engine.REngine$AnonymousRootNode.execute(REngine.java:563)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callProxy(OptimizedCallTarget.java:262)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callRoot(OptimizedCallTarget.java:251)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callBoundary(OptimizedCallTarget.java:241)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.doInvoke(OptimizedCallTarget.java:226)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.call(OptimizedCallTarget.java:202)
+	at com.oracle.truffle.r.runtime.data.Closure.eval(Closure.java:138)
+	at com.oracle.truffle.r.nodes.InlineCacheNode.evalPromise(InlineCacheNode.java:94)
+	at com.oracle.truffle.r.nodes.InlineCacheNode.doGeneric(InlineCacheNode.java:75)
+	at com.oracle.truffle.r.nodes.InlineCacheNodeGen.execute(InlineCacheNodeGen.java:42)
+	at com.oracle.truffle.r.nodes.function.PromiseHelperNode.generateValueDefault(PromiseHelperNode.java:169)
+	at com.oracle.truffle.r.nodes.function.PromiseHelperNode.evaluate(PromiseHelperNode.java:151)
+	at com.oracle.truffle.r.nodes.function.PromiseHelperNode.generateValueNonDefault(PromiseHelperNode.java:190)
+	at com.oracle.truffle.r.nodes.function.PromiseHelperNode.evaluate(PromiseHelperNode.java:153)
+	at com.oracle.truffle.r.nodes.access.variables.ReadVariableNode.executeInternal(ReadVariableNode.java:267)
+	at com.oracle.truffle.r.nodes.access.variables.LookupNode.visibleExecute(ReadVariableNode.java:112)
+	at com.oracle.truffle.r.nodes.function.WrapArgumentBaseNode.visibleExecute(WrapArgumentBaseNode.java:63)
+	at com.oracle.truffle.r.nodes.InlineCacheNode.doCached(InlineCacheNode.java:70)
+	at com.oracle.truffle.r.nodes.InlineCacheNodeGen.execute(InlineCacheNodeGen.java:36)
+	at com.oracle.truffle.r.nodes.function.PromiseHelperNode.generateValueDefault(PromiseHelperNode.java:169)
+	at com.oracle.truffle.r.nodes.function.PromiseHelperNode.generateValueNonDefault(PromiseHelperNode.java:205)
+	at com.oracle.truffle.r.nodes.function.PromiseHelperNode.evaluate(PromiseHelperNode.java:153)
+	at com.oracle.truffle.r.nodes.access.variables.LocalReadVariableNode.execute(LocalReadVariableNode.java:151)
+	at com.oracle.truffle.r.nodes.access.variables.LocalReadVariableNode.execute(LocalReadVariableNode.java:82)
+	at com.oracle.truffle.r.nodes.function.PeekLocalVariableNode.execute(PeekLocalVariableNode.java:50)
+	at com.oracle.truffle.r.nodes.function.PeekLocalVariableNode.visibleExecute(PeekLocalVariableNode.java:60)
+	at com.oracle.truffle.r.nodes.builtin.base.ReturnSpecial.execute(Return.java:58)
+	at com.oracle.truffle.r.nodes.function.RCallSpecialNode.execute(RCallSpecialNode.java:306)
+	at com.oracle.truffle.r.nodes.function.RCallSpecialNode.visibleExecute(RCallSpecialNode.java:378)
+	at com.oracle.truffle.r.nodes.function.WrapArgumentBaseNode.visibleExecute(WrapArgumentBaseNode.java:63)
+	at com.oracle.truffle.r.nodes.InlineCacheNode.doCached(InlineCacheNode.java:70)
+	at com.oracle.truffle.r.nodes.InlineCacheNodeGen.execute(InlineCacheNodeGen.java:36)
+	at com.oracle.truffle.r.nodes.function.PromiseHelperNode.generateValueDefault(PromiseHelperNode.java:169)
+	at com.oracle.truffle.r.nodes.function.PromiseHelperNode.evaluate(PromiseHelperNode.java:151)
+	at com.oracle.truffle.r.nodes.access.variables.ReadVariableNode.executeInternal(ReadVariableNode.java:267)
+	at com.oracle.truffle.r.nodes.access.variables.LookupNode.visibleExecute(ReadVariableNode.java:112)
+	at com.oracle.truffle.r.nodes.control.BlockNode.visibleExecute(BlockNode.java:88)
+	at com.oracle.truffle.r.nodes.function.FunctionBodyNode.visibleExecute(FunctionBodyNode.java:58)
+	at com.oracle.truffle.r.nodes.function.FunctionDefinitionNode.execute(FunctionDefinitionNode.java:275)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callProxy(OptimizedCallTarget.java:262)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callRoot(OptimizedCallTarget.java:251)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callBoundary(OptimizedCallTarget.java:241)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.doInvoke(OptimizedCallTarget.java:226)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callDirect(OptimizedCallTarget.java:209)
+	at org.graalvm.compiler.truffle.runtime.OptimizedDirectCallNode.callProxy(OptimizedDirectCallNode.java:86)
+	at org.graalvm.compiler.truffle.runtime.OptimizedDirectCallNode.call(OptimizedDirectCallNode.java:70)
+	at com.oracle.truffle.r.nodes.function.call.CallRFunctionNode.execute(CallRFunctionNode.java:59)
+	at com.oracle.truffle.r.nodes.function.RCallNode$DispatchedCallNode.execute(RCallNode.java:1167)
+	at com.oracle.truffle.r.nodes.function.RCallNode$FunctionDispatch.dispatch(RCallNode.java:892)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen$FunctionDispatchNodeGen.execute(RCallNodeGen.java:662)
+	at com.oracle.truffle.r.nodes.function.RCallNode.call(RCallNode.java:279)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen.execute(RCallNodeGen.java:158)
+	at com.oracle.truffle.r.nodes.access.WriteLocalFrameVariableNodeGen.execute_generic3(WriteLocalFrameVariableNodeGen.java:114)
+	at com.oracle.truffle.r.nodes.access.WriteLocalFrameVariableNodeGen.execute(WriteLocalFrameVariableNodeGen.java:48)
+	at com.oracle.truffle.r.nodes.access.WriteVariableSyntaxNode.voidExecute(WriteVariableSyntaxNode.java:60)
+	at com.oracle.truffle.r.nodes.control.BlockNode.visibleExecute(BlockNode.java:86)
+	at com.oracle.truffle.r.nodes.function.FunctionBodyNode.visibleExecute(FunctionBodyNode.java:58)
+	at com.oracle.truffle.r.nodes.function.FunctionDefinitionNode.execute(FunctionDefinitionNode.java:275)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callProxy(OptimizedCallTarget.java:262)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callRoot(OptimizedCallTarget.java:251)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callBoundary(OptimizedCallTarget.java:241)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.doInvoke(OptimizedCallTarget.java:226)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callDirect(OptimizedCallTarget.java:209)
+	at org.graalvm.compiler.truffle.runtime.OptimizedDirectCallNode.callProxy(OptimizedDirectCallNode.java:86)
+	at org.graalvm.compiler.truffle.runtime.OptimizedDirectCallNode.call(OptimizedDirectCallNode.java:70)
+	at com.oracle.truffle.r.nodes.function.call.CallRFunctionNode.execute(CallRFunctionNode.java:59)
+	at com.oracle.truffle.r.nodes.function.RCallNode$DispatchedCallNode.execute(RCallNode.java:1167)
+	at com.oracle.truffle.r.nodes.function.RCallNode$FunctionDispatch.dispatch(RCallNode.java:892)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen$FunctionDispatchNodeGen.execute(RCallNodeGen.java:662)
+	at com.oracle.truffle.r.nodes.function.RCallNode.call(RCallNode.java:279)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen.execute(RCallNodeGen.java:158)
+	at com.oracle.truffle.r.runtime.nodes.RNode.visibleExecute(RNode.java:74)
+	at com.oracle.truffle.r.nodes.control.IfNode.visibleExecute(IfNode.java:93)
+	at com.oracle.truffle.r.nodes.control.IfNode.visibleExecute(IfNode.java:96)
+	at com.oracle.truffle.r.nodes.control.BlockNode.visibleExecute(BlockNode.java:88)
+	at com.oracle.truffle.r.nodes.function.FunctionBodyNode.visibleExecute(FunctionBodyNode.java:58)
+	at com.oracle.truffle.r.nodes.function.FunctionDefinitionNode.execute(FunctionDefinitionNode.java:275)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callProxy(OptimizedCallTarget.java:262)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callRoot(OptimizedCallTarget.java:251)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callBoundary(OptimizedCallTarget.java:241)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.doInvoke(OptimizedCallTarget.java:226)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callDirect(OptimizedCallTarget.java:209)
+	at org.graalvm.compiler.truffle.runtime.OptimizedDirectCallNode.callProxy(OptimizedDirectCallNode.java:86)
+	at org.graalvm.compiler.truffle.runtime.OptimizedDirectCallNode.call(OptimizedDirectCallNode.java:70)
+	at com.oracle.truffle.r.nodes.function.call.CallRFunctionNode.execute(CallRFunctionNode.java:59)
+	at com.oracle.truffle.r.nodes.function.RCallNode$DispatchedCallNode.execute(RCallNode.java:1167)
+	at com.oracle.truffle.r.nodes.function.RCallNode$FunctionDispatch.dispatch(RCallNode.java:892)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen$FunctionDispatchNodeGen.execute(RCallNodeGen.java:662)
+	at com.oracle.truffle.r.nodes.function.RCallNode.call(RCallNode.java:279)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen.execute(RCallNodeGen.java:158)
+	at com.oracle.truffle.r.runtime.nodes.RNode.visibleExecute(RNode.java:74)
+	at com.oracle.truffle.r.nodes.control.BlockNode.visibleExecute(BlockNode.java:88)
+	at com.oracle.truffle.r.nodes.function.FunctionBodyNode.visibleExecute(FunctionBodyNode.java:58)
+	at com.oracle.truffle.r.nodes.function.FunctionDefinitionNode.execute(FunctionDefinitionNode.java:275)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callProxy(OptimizedCallTarget.java:262)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callRoot(OptimizedCallTarget.java:251)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callBoundary(OptimizedCallTarget.java:241)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.doInvoke(OptimizedCallTarget.java:226)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callDirect(OptimizedCallTarget.java:209)
+	at org.graalvm.compiler.truffle.runtime.OptimizedDirectCallNode.callProxy(OptimizedDirectCallNode.java:86)
+	at org.graalvm.compiler.truffle.runtime.OptimizedDirectCallNode.call(OptimizedDirectCallNode.java:70)
+	at com.oracle.truffle.r.nodes.function.call.CallRFunctionNode.execute(CallRFunctionNode.java:59)
+	at com.oracle.truffle.r.nodes.function.RCallNode$DispatchedCallNode.execute(RCallNode.java:1167)
+	at com.oracle.truffle.r.nodes.function.RCallNode$FunctionDispatch.dispatch(RCallNode.java:892)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen$FunctionDispatchNodeGen.executeAndSpecialize(RCallNodeGen.java:708)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen$FunctionDispatchNodeGen.execute(RCallNodeGen.java:672)
+	at com.oracle.truffle.r.nodes.function.RCallNode.call(RCallNode.java:279)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen.executeAndSpecialize(RCallNodeGen.java:222)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen.execute(RCallNodeGen.java:206)
+	at com.oracle.truffle.r.nodes.access.WriteLocalFrameVariableNodeGen.execute_generic3(WriteLocalFrameVariableNodeGen.java:114)
+	at com.oracle.truffle.r.nodes.access.WriteLocalFrameVariableNodeGen.execute(WriteLocalFrameVariableNodeGen.java:48)
+	at com.oracle.truffle.r.nodes.access.WriteVariableSyntaxNode.execute(WriteVariableSyntaxNode.java:65)
+	at com.oracle.truffle.r.nodes.control.ReplacementDispatchNode.execute(ReplacementDispatchNode.java:83)
+	at com.oracle.truffle.r.nodes.access.WriteLocalFrameVariableNodeGen.execute_generic3(WriteLocalFrameVariableNodeGen.java:114)
+	at com.oracle.truffle.r.nodes.access.WriteLocalFrameVariableNodeGen.execute(WriteLocalFrameVariableNodeGen.java:48)
+	at com.oracle.truffle.r.nodes.access.WriteVariableSyntaxNode.voidExecute(WriteVariableSyntaxNode.java:60)
+	at com.oracle.truffle.r.nodes.control.ReplacementDispatchNode.voidExecute(ReplacementDispatchNode.java:77)
+	at com.oracle.truffle.r.nodes.control.IfNode.voidExecute(IfNode.java:69)
+	at com.oracle.truffle.r.nodes.control.BlockNode.voidExecute(BlockNode.java:70)
+	at com.oracle.truffle.r.nodes.control.IfNode.voidExecute(IfNode.java:69)
+	at com.oracle.truffle.r.nodes.control.BlockNode.voidExecute(BlockNode.java:70)
+	at com.oracle.truffle.r.nodes.control.IfNode.voidExecute(IfNode.java:72)
+	at com.oracle.truffle.r.nodes.control.BlockNode.voidExecute(BlockNode.java:70)
+	at com.oracle.truffle.r.nodes.control.IfNode.voidExecute(IfNode.java:72)
+	at com.oracle.truffle.r.nodes.control.BlockNode.voidExecute(BlockNode.java:70)
+	at com.oracle.truffle.r.nodes.control.ForNode$AbstractIndexRepeatingNode.executeRepeating(ForNode.java:286)
+	at org.graalvm.compiler.truffle.runtime.OptimizedOSRLoopNode.profilingLoop(OptimizedOSRLoopNode.java:141)
+	at org.graalvm.compiler.truffle.runtime.OptimizedOSRLoopNode.executeLoop(OptimizedOSRLoopNode.java:118)
+	at com.oracle.truffle.r.nodes.control.ForNode.iterate(ForNode.java:95)
+	at com.oracle.truffle.r.nodes.control.ForNodeGen.executeAndSpecialize(ForNodeGen.java:108)
+	at com.oracle.truffle.r.nodes.control.ForNodeGen.execute(ForNodeGen.java:85)
+	at com.oracle.truffle.r.runtime.nodes.RNode.voidExecute(RNode.java:66)
+	at com.oracle.truffle.r.nodes.control.BlockNode.visibleExecute(BlockNode.java:86)
+	at com.oracle.truffle.r.nodes.function.FunctionBodyNode.visibleExecute(FunctionBodyNode.java:58)
+	at com.oracle.truffle.r.nodes.function.FunctionDefinitionNode.execute(FunctionDefinitionNode.java:275)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callProxy(OptimizedCallTarget.java:262)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callRoot(OptimizedCallTarget.java:251)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callBoundary(OptimizedCallTarget.java:241)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.doInvoke(OptimizedCallTarget.java:226)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callDirect(OptimizedCallTarget.java:209)
+	at org.graalvm.compiler.truffle.runtime.OptimizedDirectCallNode.callProxy(OptimizedDirectCallNode.java:86)
+	at org.graalvm.compiler.truffle.runtime.OptimizedDirectCallNode.call(OptimizedDirectCallNode.java:70)
+	at com.oracle.truffle.r.nodes.function.call.CallRFunctionNode.execute(CallRFunctionNode.java:59)
+	at com.oracle.truffle.r.nodes.function.RCallNode$DispatchedCallNode.execute(RCallNode.java:1167)
+	at com.oracle.truffle.r.nodes.function.RCallNode$FunctionDispatch.dispatch(RCallNode.java:892)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen$FunctionDispatchNodeGen.executeAndSpecialize(RCallNodeGen.java:708)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen$FunctionDispatchNodeGen.execute(RCallNodeGen.java:672)
+	at com.oracle.truffle.r.nodes.function.RCallNode.call(RCallNode.java:279)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen.executeAndSpecialize(RCallNodeGen.java:222)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen.execute(RCallNodeGen.java:206)
+	at com.oracle.truffle.r.nodes.access.WriteLocalFrameVariableNodeGen.execute_generic3(WriteLocalFrameVariableNodeGen.java:114)
+	at com.oracle.truffle.r.nodes.access.WriteLocalFrameVariableNodeGen.execute(WriteLocalFrameVariableNodeGen.java:48)
+	at com.oracle.truffle.r.nodes.access.WriteVariableSyntaxNode.voidExecute(WriteVariableSyntaxNode.java:60)
+	at com.oracle.truffle.r.nodes.control.ReplacementDispatchNode.voidExecute(ReplacementDispatchNode.java:77)
+	at com.oracle.truffle.r.nodes.control.IfNode.voidExecute(IfNode.java:69)
+	at com.oracle.truffle.r.nodes.control.BlockNode.visibleExecute(BlockNode.java:86)
+	at com.oracle.truffle.r.nodes.function.FunctionBodyNode.visibleExecute(FunctionBodyNode.java:58)
+	at com.oracle.truffle.r.nodes.function.FunctionDefinitionNode.execute(FunctionDefinitionNode.java:275)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callProxy(OptimizedCallTarget.java:262)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callRoot(OptimizedCallTarget.java:251)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callBoundary(OptimizedCallTarget.java:241)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.doInvoke(OptimizedCallTarget.java:226)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callDirect(OptimizedCallTarget.java:209)
+	at org.graalvm.compiler.truffle.runtime.OptimizedDirectCallNode.callProxy(OptimizedDirectCallNode.java:86)
+	at org.graalvm.compiler.truffle.runtime.OptimizedDirectCallNode.call(OptimizedDirectCallNode.java:70)
+	at com.oracle.truffle.r.nodes.function.call.CallRFunctionNode.execute(CallRFunctionNode.java:59)
+	at com.oracle.truffle.r.nodes.function.RCallNode$DispatchedCallNode.execute(RCallNode.java:1167)
+	at com.oracle.truffle.r.nodes.function.RCallNode$FunctionDispatch.dispatch(RCallNode.java:892)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen$FunctionDispatchNodeGen.executeAndSpecialize(RCallNodeGen.java:708)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen$FunctionDispatchNodeGen.execute(RCallNodeGen.java:672)
+	at com.oracle.truffle.r.nodes.function.RCallNode.call(RCallNode.java:279)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen.executeAndSpecialize(RCallNodeGen.java:222)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen.execute(RCallNodeGen.java:206)
+	at com.oracle.truffle.r.runtime.nodes.RNode.visibleExecute(RNode.java:74)
+	at com.oracle.truffle.r.engine.REngine$AnonymousBodyNode.visibleExecute(REngine.java:636)
+	at com.oracle.truffle.r.engine.REngine$AnonymousRootNode.execute(REngine.java:563)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callProxy(OptimizedCallTarget.java:262)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callRoot(OptimizedCallTarget.java:251)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callBoundary(OptimizedCallTarget.java:241)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.doInvoke(OptimizedCallTarget.java:226)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callDirect(OptimizedCallTarget.java:209)
+	at org.graalvm.compiler.truffle.runtime.OptimizedDirectCallNode.callProxy(OptimizedDirectCallNode.java:86)
+	at org.graalvm.compiler.truffle.runtime.OptimizedDirectCallNode.call(OptimizedDirectCallNode.java:70)
+	at com.oracle.truffle.r.engine.EngineRootNode$EngineBodyNode.execute(EngineRootNode.java:135)
+	at com.oracle.truffle.r.engine.EngineRootNode.execute(EngineRootNode.java:85)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callProxy(OptimizedCallTarget.java:262)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callRoot(OptimizedCallTarget.java:251)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.callBoundary(OptimizedCallTarget.java:241)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.doInvoke(OptimizedCallTarget.java:226)
+	at org.graalvm.compiler.truffle.runtime.OptimizedCallTarget.call(OptimizedCallTarget.java:202)
+	at com.oracle.truffle.api.vm.PolyglotContextImpl.eval(PolyglotContextImpl.java:746)
+	at org.graalvm.polyglot.Context.eval(Context.java:311)
+	at com.oracle.truffle.r.launcher.RscriptCommand.executeFile(RscriptCommand.java:90)
+	at com.oracle.truffle.r.launcher.RscriptCommand.execute(RscriptCommand.java:72)
+	at com.oracle.truffle.r.launcher.RscriptCommand.doMain(RscriptCommand.java:162)
+	at com.oracle.truffle.r.launcher.RscriptCommand.main(RscriptCommand.java:156)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.oracle.truffle.r.legacylauncher.LegacyLauncher.main(LegacyLauncher.java:38)
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.lang.String.substring(String.java:1967)
+	at com.oracle.truffle.r.runtime.DCF.read(DCF.java:82)
+	at com.oracle.truffle.r.nodes.builtin.base.ReadDCF.doReadDCF(ReadDCF.java:76)
+	at com.oracle.truffle.r.nodes.builtin.base.ReadDCFNodeGen.executeAndSpecialize(ReadDCFNodeGen.java:60)
+	at com.oracle.truffle.r.nodes.builtin.base.ReadDCFNodeGen.execute(ReadDCFNodeGen.java:38)
+	at com.oracle.truffle.r.nodes.builtin.RBuiltinNode$Arg3.call(RBuiltinNode.java:200)
+	at com.oracle.truffle.r.nodes.builtin.InternalNode$InternalCallNode.execute(InternalNode.java:229)
+	at com.oracle.truffle.r.nodes.builtin.InternalNode$InternalUninitializedNode.execute(InternalNode.java:176)
+	at com.oracle.truffle.r.runtime.nodes.RNode.visibleExecute(RNode.java:74)
+	at com.oracle.truffle.r.nodes.InlineCacheNode.doCached(InlineCacheNode.java:70)
+	at com.oracle.truffle.r.nodes.InlineCacheNodeGen.executeAndSpecialize(InlineCacheNodeGen.java:83)
+	at com.oracle.truffle.r.nodes.InlineCacheNodeGen.execute(InlineCacheNodeGen.java:46)
+	at com.oracle.truffle.r.nodes.function.PromiseHelperNode.generateValueDefault(PromiseHelperNode.java:169)
+	at com.oracle.truffle.r.nodes.function.PromiseHelperNode.evaluate(PromiseHelperNode.java:151)
+	at com.oracle.truffle.r.nodes.builtin.base.Return.returnFunction(Return.java:101)
+	at com.oracle.truffle.r.nodes.builtin.base.ReturnNodeGen.executeAndSpecialize(ReturnNodeGen.java:63)
+	at com.oracle.truffle.r.nodes.builtin.base.ReturnNodeGen.execute(ReturnNodeGen.java:44)
+	at com.oracle.truffle.r.nodes.builtin.RBuiltinNode$Arg1.call(RBuiltinNode.java:174)
+	at com.oracle.truffle.r.nodes.function.RCallNode$BuiltinCallNode.execute(RCallNode.java:1110)
+	at com.oracle.truffle.r.nodes.function.RCallNode$FunctionDispatch.dispatch(RCallNode.java:892)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen$FunctionDispatchNodeGen.executeAndSpecialize(RCallNodeGen.java:708)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen$FunctionDispatchNodeGen.execute(RCallNodeGen.java:672)
+	at com.oracle.truffle.r.nodes.function.RCallNode.call(RCallNode.java:279)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen.executeAndSpecialize(RCallNodeGen.java:222)
+	at com.oracle.truffle.r.nodes.function.RCallNodeGen.execute(RCallNodeGen.java:206)
+	at com.oracle.truffle.r.runtime.nodes.RNode.voidExecute(RNode.java:66)
+	at com.oracle.truffle.r.nodes.control.IfNode.voidExecute(IfNode.java:69)
+	at com.oracle.truffle.r.nodes.control.BlockNode.visibleExecute(BlockNode.java:86)
+	at com.oracle.truffle.r.nodes.function.FunctionBodyNode.visibleExecute(FunctionBodyNode.java:58)
+	at com.oracle.truffle.r.nodes.function.FunctionDefinitionNode.execute(FunctionDefinitionNode.java:275)
+	... 219 more
+Caused by: Attached Guest Language Frames (10)
+
+Frame(d=7): read.dcf <split-f2d890c> (called as: read.dcf(file = tmpf))
+Frame(d=6): <promise>472959877 (called as: available.packages(contriburl = contriburl, method = method))
+Frame(d=6): doTryCatch (called as: doTryCatch(return(expr), name, parentenv, handler))
+Frame(d=5): tryCatchOne (called as: tryCatchOne(expr, names, parentenv, handlers[[1L]]))
+Frame(d=4): tryCatchList <split-54ffa561> (called as: tryCatchList(expr, classes, parentenv, handlers))
+Frame(d=3): tryCatch (called as: tryCatch(read.dcf(file = tmpf), error = identity))
+Frame(d=2): available.packages (called as: available.packages(contriburl = contriburl, method = method))
+Frame(d=1): install.packages (called as: install.packages("igraph", repos = "http://cran.case.edu/"))
+Frame(d=0): <repl wrapper> (called as: <invalid call>)
+<empty frame>
+
+with frame slot contents:
+
+Frame(d=7): read.dcf <split-f2d890c> (called as: read.dcf(file = tmpf))
+      file = [3]
+      fields = [3, null, expr=ConstantObjectNode@52bd9a27, NULL]
+      all = [3, null, expr=ConstantLogicalScalarNode@611e5819, 0]
+      keep.white = [3, null, expr=ConstantObjectNode@681c0ae6, NULL]
+      Visibility = true
+      OnExit = pairlist(type=null, tag=NULL, car=RNull, cdr=RPairList)
+Frame(d=6): <promise>472959877 (called as: available.packages(contriburl = contriburl, method = method))
+      contriburl = [0, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@549ac12c, expr=WrapArgumentNode@4bb147ec, [http://cran.case.edu/src/contrib]]
+      method = [2, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@549ac12c, expr=WrapArgumentNode@33f2cfda, null]
+      fields = [Package, Version, Priority, Depends, Imports, LinkingTo, Suggests, Enhances, License, License_i...]
+      type = [3, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@188a5fc2, expr=WrapDefaultArgumentNode@59a2388e, null]
+      filters = [3, null, expr=ConstantObjectNode@186d8a71, NULL]
+      repos = http://cran.case.edu/src/contrib
+      Visibility = true
+      TempFrameSlot = null
+      requiredFields = [Package, Version, Priority, Depends, Imports, LinkingTo, Suggests, Enhances, License, License_i...]
+      res = []
+      *anonymous-FOR_INDEX-117 = 1
+      *anonymous-FOR_RANGE-118 = [http://cran.case.edu/src/contrib]
+      *anonymous-FOR_LENGTH-119 = 1
+      localcran = 0
+      dest = [/tmp/RtmpRyxDeK/repos_http%3A%2F%2Fcran.case.edu%2Fsrc%2Fcontrib.rds]
+      need_dest = 1
+      op = [[0]]
+      2 = identity
+      z = 0
+      res0 = [[serialized stream format not recognized: 60], language(readRDS(dest))]
+      tmpf = [/tmp/RtmpRyxDeK/fileuonzomayy0j7]
+      OnExit = pairlist(type=null, tag=NULL, car=RNull, cdr=RPairList)
+Frame(d=6): doTryCatch (called as: doTryCatch(return(expr), name, parentenv, handler))
+      expr = [18, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@1cb9ef52, expr=WrapArgumentNode@512d4583, null]
+      name = [4, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@1cb9ef52, expr=WrapArgumentNode@2abc224d, [error]]
+      parentenv = [4, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@1cb9ef52, expr=WrapArgumentNode@13cd7ea5, <environment: 0x5a622fe8>]
+      handler = [4, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@1cb9ef52, expr=WrapArgumentNode@102d92c4, identity]
+      Visibility = true
+      8 = identity
+      HandlerStack = NULL
+Frame(d=5): tryCatchOne (called as: tryCatchOne(expr, names, parentenv, handlers[[1L]]))
+      expr = [16, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@58f31629, expr=WrapArgumentNode@7a2e0858, null]
+      name = [0, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@58f31629, expr=WrapArgumentNode@aac3f4e, [error]]
+      parentenv = [0, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@58f31629, expr=WrapArgumentNode@1f38957, <environment: 0x5a622fe8>]
+      handler = [2, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@58f31629, expr=WrapArgumentNode@2df3c564, identity]
+      Visibility = true
+      doTryCatch = doTryCatch
+      value = null
+      msg = null
+      call = null
+      cond = null
+Frame(d=4): tryCatchList <split-54ffa561> (called as: tryCatchList(expr, classes, parentenv, handlers))
+      expr = [0, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@124d26ba, expr=WrapArgumentNode@37c5fc56, null]
+      names = [4, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@124d26ba, expr=WrapArgumentNode@1c025cb, [error]]
+      parentenv = [4, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@124d26ba, expr=WrapArgumentNode@50825a02, <environment: 0x5a622fe8>]
+      handlers = [4, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@124d26ba, expr=WrapArgumentNode@68809cc7, [identity]]
+      Visibility = true
+      TempFrameSlot = null
+      nh = 1
+      8 = identity
+Frame(d=3): tryCatch (called as: tryCatch(read.dcf(file = tmpf), error = identity))
+      expr = [18, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@188a5fc2, expr=WrapArgumentNode@1c30cb85, null]
+      ... = RArgsValuesAndNames: error = [2, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@188a5fc2, expr=WrapArgumentNode@577bf0aa, identity]
+      finally = missing
+      Visibility = true
+      tryCatchList = tryCatchList
+      tryCatchOne = tryCatchOne
+      handlers = [identity]
+      TempFrameSlot = null
+      classes = [error]
+      parentenv = <environment: 0x5a622fe8>
+Frame(d=2): available.packages (called as: available.packages(contriburl = contriburl, method = method))
+      contriburl = [0, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@549ac12c, expr=WrapArgumentNode@4bb147ec, [http://cran.case.edu/src/contrib]]
+      method = [2, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@549ac12c, expr=WrapArgumentNode@33f2cfda, null]
+      fields = [Package, Version, Priority, Depends, Imports, LinkingTo, Suggests, Enhances, License, License_i...]
+      type = [3, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@188a5fc2, expr=WrapDefaultArgumentNode@59a2388e, null]
+      filters = [3, null, expr=ConstantObjectNode@186d8a71, NULL]
+      repos = http://cran.case.edu/src/contrib
+      Visibility = true
+      TempFrameSlot = null
+      requiredFields = [Package, Version, Priority, Depends, Imports, LinkingTo, Suggests, Enhances, License, License_i...]
+      res = []
+      *anonymous-FOR_INDEX-117 = 1
+      *anonymous-FOR_RANGE-118 = [http://cran.case.edu/src/contrib]
+      *anonymous-FOR_LENGTH-119 = 1
+      localcran = 0
+      dest = [/tmp/RtmpRyxDeK/repos_http%3A%2F%2Fcran.case.edu%2Fsrc%2Fcontrib.rds]
+      need_dest = 1
+      op = [[0]]
+      2 = identity
+      z = 0
+      res0 = [[serialized stream format not recognized: 60], language(readRDS(dest))]
+      tmpf = [/tmp/RtmpRyxDeK/fileuonzomayy0j7]
+      OnExit = pairlist(type=null, tag=NULL, car=RNull, cdr=RPairList)
+Frame(d=1): install.packages (called as: install.packages("igraph", repos = "http://cran.case.edu/"))
+      pkgs = [2, null, expr=ConstantObjectNode@43f03c23, igraph]
+      lib = [/home/diego/graalvm/graalvm-ee-1.0.0-rc2/jre/languages/R/library]
+      repos = [2, null, expr=ConstantObjectNode@7a1b8a46, http://cran.case.edu/]
+      contriburl = [3, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@549ac12c, expr=WrapDefaultArgumentNode@2921199d, [http://cran.case.edu/src/contrib]]
+      method = missing
+      available = [3, null, expr=ConstantObjectNode@3d40a3b4, NULL]
+      destdir = [3, null, expr=ConstantObjectNode@7f13811b, NULL]
+      dependencies = [Depends, Imports, LinkingTo]
+      type = [3, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@549ac12c, expr=WrapDefaultArgumentNode@78307a56, source]
+      configure.args = [3, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@549ac12c, expr=WrapDefaultArgumentNode@40d52be7, null]
+      configure.vars = [3, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@549ac12c, expr=WrapDefaultArgumentNode@23ad71bf, null]
+      clean = [3, null, expr=ConstantLogicalScalarNode@1983b48a, 0]
+      Ncpus = [3, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@549ac12c, expr=WrapDefaultArgumentNode@629a9f26, null]
+      verbose = [3, org.graalvm.compiler.truffle.runtime.FrameWithoutBoxing@549ac12c, expr=WrapDefaultArgumentNode@b791a81, 0]
+      libs_only = [3, null, expr=ConstantLogicalScalarNode@4391a2d8, 0]
+      INSTALL_opts = []
+      quiet = [3, null, expr=ConstantLogicalScalarNode@47b269c4, 0]
+      keep_outputs = [3, null, expr=ConstantLogicalScalarNode@71e7adbb, 0]
+      ... = RArgsValuesAndNames: 
+      type2 = source
+      Visibility = true
+      TempFrameSlot = null
+      get_package_name = get_package_name
+      getConfigureArgs = getConfigureArgs
+      getConfigureVars = getConfigureVars
+      get_install_opts = get_install_opts
+      ok = [TRUE]
+      getDeps = 1
+      libpath = []
+      cmd0 = [/home/diego/graalvm/graalvm-ee-1.0.0-rc2/jre/languages/R/bin/R]
+      args0 = [CMD, INSTALL]
+      output = 
+      env = []
+      outdir = [/mnt/d/DATA000/GitHub/ikkunaEdu/simplePlot_GraalVM]
+      tmpd = [/tmp/RtmpRyxDeK/downloaded_packages]
+      nonlocalrepos = 1
+Frame(d=0): <repl wrapper> (called as: <invalid call>)
+      Visibility = false
+      .Random.seed = active binding
+<empty frame>
+
+

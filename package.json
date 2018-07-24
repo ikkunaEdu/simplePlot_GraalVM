@@ -1,0 +1,28 @@
+{
+  "name": "simpleplot_graalvm",
+  "version": "1.0.0",
+  "description": "A simple example on how to integrate nodejs with R to plot a basic graph.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --jvm --polyglot tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikkunaEdu/simplePlot_GraalVM.git"
+  },
+  "keywords": [
+    "graalvm",
+    "node",
+    "nodejs",
+    "R"
+  ],
+  "author": "Diego Correa T.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ikkunaEdu/simplePlot_GraalVM/issues"
+  },
+  "homepage": "https://github.com/ikkunaEdu/simplePlot_GraalVM#readme",
+  "devDependencies": {
+    "express": "^4.16.3"
+  }
+}
